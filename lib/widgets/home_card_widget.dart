@@ -24,6 +24,7 @@ class HomeCardWidget extends StatelessWidget {
           color: AppColors.whiteColor,
           borderRadius: BorderRadius.circular(9),
         ),
+        
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
