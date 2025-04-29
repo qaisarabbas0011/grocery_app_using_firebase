@@ -20,6 +20,7 @@ class LocationWidget extends StatelessWidget {
           ),
         ),
       ),
+      
       title: Text(
         "Your Location",
         style: TextStyle(fontSize: 11, fontWeight: FontWeight.w300),
