@@ -69,6 +69,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
         isLoading = false;
         inWishList = true;
       });
+      // ignore: use_build_context_synchronously
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
         content: Text("Item added to wishlist"),
         backgroundColor: AppColors.primaryColor,
