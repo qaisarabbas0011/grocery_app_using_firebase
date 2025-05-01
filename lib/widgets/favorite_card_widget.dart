@@ -16,7 +16,7 @@ class FavoriteCardWidget extends StatelessWidget {
             Row(
               children: [
                 Image.asset(
-                  "images/photo.jpg",
+                  "images/splash_image.jpg",
                   height: 60,
                   width: 60,
                 ),
