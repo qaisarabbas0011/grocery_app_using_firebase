@@ -1,11 +1,47 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:grocery_plus/constants/groccery_item.dart';
 
-class HomeScreen extends StatelessWidget {
- final groceryItem = GroceryItem();
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
-  HomeScreen({super.key});
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
 
+class _HomeScreenState extends State<HomeScreen> {
+  final groceryItem = GroceryItem();
+
+  Future<void> addToCart(Map<String, String> item) async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) return;
+
+    try {
+      final cartRef = FirebaseFirestore.instance
+          .collection('Users')
+          .doc(user.uid)
+          .collection('cartItems');
+
+      await cartRef.doc(item['title']).set({
+        'productId': item['title'],
+        'title': item['title'],
+        'image': item['image'],
+        'price': item['price'],
+        'rating': item['rating'],
+        'quantity': 1,
+      });
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('${item['title']} added to cart!'),
+          duration: const Duration(seconds: 2),
+        ),
+      );
+    } catch (e) {
+      debugPrint('Error adding to cart: $e');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +73,6 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  // Image
                   Expanded(
                     child: ClipRRect(
                       borderRadius:
@@ -48,7 +83,6 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // Title & Price
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
@@ -65,13 +99,14 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  // Button
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8.0),
                     child: SizedBox(
                       width: double.infinity,
                       child: ElevatedButton.icon(
-                        onPressed: () {},
+                        onPressed: () {
+                          addToCart(item);
+                        },
                         icon: const Icon(Icons.add_shopping_cart,
                             color: Colors.white),
                         label: const Text("Add to Cart"),
