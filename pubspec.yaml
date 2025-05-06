@@ -24,6 +24,7 @@ dependencies:
   image_picker: ^1.1.2
   storage_database: ^2.0.5
   uuid: ^4.5.1
+  get: ^4.7.2
    # Add this as well
 
 
