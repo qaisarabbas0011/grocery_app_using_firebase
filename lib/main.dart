@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:grocery_plus/constants/colors.dart';
 import 'package:grocery_plus/screens/splash_screen.dart';
 
-Future<void> main() async {
+Future<void> main() async { 
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(const MyApp());

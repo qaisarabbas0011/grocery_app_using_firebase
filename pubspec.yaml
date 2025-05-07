@@ -25,6 +25,7 @@ dependencies:
   storage_database: ^2.0.5
   uuid: ^4.5.1
   get: ^4.7.2
+  flutter_spinkit: ^5.2.1
    # Add this as well
 
 

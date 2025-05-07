@@ -28,7 +28,7 @@ class _ChangePasswordSceenState extends State<ChangePasswordSceen> {
         );
         return;
       }
-      var credential = await EmailAuthProvider.credential(
+      var credential = EmailAuthProvider.credential(
           email: emailController.text, password: passwordController.text);
       await user.reauthenticateWithCredential(credential);
       await user.updatePassword(newPasswordController.text);
