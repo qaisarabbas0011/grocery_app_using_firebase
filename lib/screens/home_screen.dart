@@ -1,8 +1,6 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:grocery_plus/Models/grocery_model.dart';
 import 'package:grocery_plus/controllers/home_controller.dart';
 import 'package:grocery_plus/screens/product_detail.dart';
 import 'package:grocery_plus/screens/upload_items.dart';
