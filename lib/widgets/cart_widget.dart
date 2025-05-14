@@ -5,7 +5,7 @@ import 'package:grocery_plus/Models/grocery_model.dart';
 class CartWidget extends StatelessWidget {
   final Items items;
   final Function() onDelete;
-  const CartWidget({super.key, required this.onDelete, required this.items});
+  CartWidget({super.key, required this.onDelete, required this.items});
 
   @override
   Widget build(BuildContext context) {
@@ -17,11 +17,11 @@ class CartWidget extends StatelessWidget {
           children: [
             Row(
               children: [
-                Image.network(
-                  items.imageUrl,
-                  height: 60,
-                  width: 60,
-                ),
+                // Image.network(
+                //   items.imageUrl,
+                //   height: 60,
+                //   width: 60,
+                // ),
                 const SizedBox(
                   width: 10,
                 ),

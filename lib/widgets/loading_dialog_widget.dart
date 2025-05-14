@@ -4,7 +4,6 @@ import 'package:grocery_plus/constants/colors.dart';
 
 class LoadingDialogWidget extends StatelessWidget {
   const LoadingDialogWidget({super.key});
-
   @override
   Widget build(BuildContext context) {
     var spinkit = SpinKitFadingCube(
