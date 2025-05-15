@@ -5,7 +5,7 @@ import 'package:grocery_plus/Models/grocery_model.dart';
 class CartWidget extends StatelessWidget {
   final Items items;
   final Function() onDelete;
-  CartWidget({super.key, required this.onDelete, required this.items});
+  const CartWidget({super.key, required this.onDelete, required this.items});
 
   @override
   Widget build(BuildContext context) {
