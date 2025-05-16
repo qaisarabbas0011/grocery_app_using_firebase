@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';
-import 'package:get/utils.dart';
 import 'package:grocery_plus/Models/user_model.dart';
 import 'package:grocery_plus/controllers/user_controller.dart';
 import 'package:grocery_plus/screens/change_password_sceen.dart';
