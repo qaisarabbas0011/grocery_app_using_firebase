@@ -29,10 +29,8 @@ class EditProfileController extends GetxController {
       Get.dialog(LoadingDialogWidget(), barrierDismissible: false);
 
       String imageUrl = userProfile;
-      if (imageFile != null) {
-        imageUrl = await uploadImageToFirebaseStorage(imageFile.value!);
-      }
-
+      imageUrl = await uploadImageToFirebaseStorage(imageFile.value!);
+    
       await firestore.collection('Users').doc(auth.currentUser!.uid).update({
         'username': username,
         'profilePic': imageUrl,
