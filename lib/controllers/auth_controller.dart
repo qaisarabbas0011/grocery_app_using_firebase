@@ -48,8 +48,11 @@ class AuthController extends GetxController {
         userCredential.user!.sendEmailVerification();
         Get.snackbar("Verfied", "Verification email sent to $email",
             snackPosition: SnackPosition.TOP);
-        // ScaffoldMessenger.of(context).showSnackBar(
-        //     SnackBar(content: Text("Verification email sent to ${email}")));
+        await auth.signOut();
+        Get.snackbar("Success", "Account Created Successfully",
+            snackPosition: SnackPosition.BOTTOM);
+        Get.offAll(() => LoginScreen());
+        
         UserModel userData = UserModel(
             uid: auth.currentUser!.uid,
             username: name,
