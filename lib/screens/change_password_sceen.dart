@@ -22,11 +22,14 @@ class _ChangePasswordSceenState extends State<ChangePasswordSceen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
+
           padding: const EdgeInsets.all(16.0),
+
           child: SingleChildScrollView(
+            
             child: Column(
               children: [
-                CustomTextField(
+                CustomTextField( 
                     hintText: "Enter Your Email",
                     controller: emailController,
                     prefixIcon: Icon(Icons.email),
