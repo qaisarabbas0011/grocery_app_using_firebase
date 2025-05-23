@@ -66,7 +66,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     Icons.person,
                     color: AppColors.primaryColor,
                   ),
-                  controller: nameController),
+                  controller: nameController,
+                  keyboardType: TextInputType.text),
               const SizedBox(
                 height: 16,
               ),
@@ -76,7 +77,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     Icons.email,
                     color: AppColors.primaryColor,
                   ),
-                  controller: emailController),
+                  controller: emailController,
+                  keyboardType: TextInputType.emailAddress),
               const SizedBox(
                 height: 16,
               ),
@@ -86,7 +88,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     Icons.phone,
                     color: AppColors.primaryColor,
                   ),
-                  controller: phoneController),
+                  controller: phoneController,
+                  keyboardType: TextInputType.phone),
               const SizedBox(
                 height: 16,
               ),
@@ -97,7 +100,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     color: AppColors.primaryColor,
                   ),
                   suffixIcon: Icon(Icons.visibility_off),
-                  controller: passswordController),
+                  controller: passswordController,
+                  keyboardType: TextInputType.visiblePassword),
               const SizedBox(
                 height: 80,
               ),

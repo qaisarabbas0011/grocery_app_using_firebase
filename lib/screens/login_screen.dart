@@ -83,6 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         color: AppColors.primaryColor,
                       ),
                       controller: emailController,
+                      keyboardType: TextInputType.emailAddress,
                     ),
                     const SizedBox(
                       height: 20,
@@ -94,6 +95,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         color: AppColors.primaryColor,
                       ),
                       controller: passwordController,
+                      keyboardType: TextInputType.text,
                       suffixIcon: Icon(
                         Icons.visibility_off,
                       ),

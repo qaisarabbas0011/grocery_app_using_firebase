@@ -53,17 +53,20 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 CustomTextField(
                     hintText: 'hintText',
                     controller: nameController,
-                    prefixIcon: const Icon(Icons.person)),
+                    prefixIcon: const Icon(Icons.person),
+                    keyboardType: TextInputType.name),
                 const SizedBox(height: 10),
                 CustomTextField(
                     hintText: 'hintText',
                     controller: emailController,
-                    prefixIcon: const Icon(Icons.email)),
+                    prefixIcon: const Icon(Icons.email),
+                    keyboardType: TextInputType.emailAddress),
                 const SizedBox(height: 10),
                 CustomTextField(
                     hintText: 'hintText',
                     controller: phoneController,
-                    prefixIcon: const Icon(Icons.phone)),
+                    prefixIcon: const Icon(Icons.phone),
+                    keyboardType: TextInputType.phone),
                 const SizedBox(height: 150),
                 PrimaryButton(
                   title: 'Save',

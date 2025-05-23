@@ -62,7 +62,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       homeController.searchProduct(value);
                     },
                     prefixIcon: Icon(Icons.search),
-                    controller: searchController),
+                    controller: searchController,
+                    keyboardType: TextInputType.text),
                 SizedBox(
                   height: 12,
                 ),

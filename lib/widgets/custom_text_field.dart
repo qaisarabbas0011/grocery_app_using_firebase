@@ -17,7 +17,7 @@ class CustomTextField extends StatelessWidget {
     required this.controller,
     this.suffixIcon,
     this.ontap,
-    this.onChanged,
+    this.onChanged, required TextInputType keyboardType,
   });
 
   @override

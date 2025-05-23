@@ -68,7 +68,8 @@ class _UploadItemsState extends State<UploadItems> {
               CustomTextField(
                   hintText: "Enter Product Name",
                   controller: nameController,
-                  prefixIcon: Icon(Icons.shopping_cart)),
+                  prefixIcon: Icon(Icons.shopping_cart),
+                  keyboardType: TextInputType.text),
               const SizedBox(
                 height: 12,
               ),
@@ -77,6 +78,7 @@ class _UploadItemsState extends State<UploadItems> {
                 controller: diController,
                 maxLines: 4,
                 prefixIcon: Icon(Icons.description),
+                keyboardType: TextInputType.multiline,
               ),
               const SizedBox(
                 height: 12,
@@ -84,7 +86,8 @@ class _UploadItemsState extends State<UploadItems> {
               CustomTextField(
                   hintText: "Enter Product price",
                   controller: priceController,
-                  prefixIcon: Icon(Icons.attach_money)),
+                  prefixIcon: Icon(Icons.attach_money),
+                  keyboardType: TextInputType.number),
               const SizedBox(height: 50),
               PrimaryButton(
                   title: "Upload",

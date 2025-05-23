@@ -33,18 +33,21 @@ class _ChangePasswordSceenState extends State<ChangePasswordSceen> {
                     hintText: "Enter Your Email",
                     controller: emailController,
                     prefixIcon: Icon(Icons.email),
+                    keyboardType: TextInputType.emailAddress,
                 ),
                 const SizedBox(height: 20),
                 CustomTextField(
                     hintText: "Enter Your old Password",
                     controller: passwordController,
                     prefixIcon: Icon(Icons.lock),
+                    keyboardType: TextInputType.visiblePassword,
                 ),
                 const SizedBox(height: 20),
                 CustomTextField(
                   hintText: "Enter your new password",
                   controller: newPasswordController,
                   prefixIcon: Icon(Icons.lock_outline),
+                  keyboardType: TextInputType.visiblePassword,
                 ),
                 const SizedBox(height: 300),
                 PrimaryButton(
